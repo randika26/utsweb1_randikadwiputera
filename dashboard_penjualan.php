@@ -68,12 +68,8 @@ if (isset($_SESSION['cart'])) {
 
 // Logika Diskon
 $persenDiskon = 0;
-if ($total > 0 && $total < 50000) {
-    $persenDiskon = 5; 
-} elseif ($total >= 50000 && $total <= 100000) {
+if ($total > 100000) {
     $persenDiskon = 10;
-} elseif ($total > 100000) {
-    $persenDiskon = 15;
 }
 
 $diskon = ($persenDiskon / 100) * $total;
@@ -153,10 +149,11 @@ function formatRupiah($angka) {
             </div>
         </div>
         <div class="header-right">
-            <span>Selamat datang, admin!</span>
-            <div class="role">Role: Dosen</div>
-            <button class="logout-btn">Logout</button>
-        </div>
+    <span>Selamat datang, admin!</span>
+    <div class="role">Role: Dosen</div>
+    
+    <a href="logout.php" class="logout-btn" style="text-decoration: underline; color: #dc3545;">Logout</a>
+    </div>
     </div>
     
     <div class="input-area">

@@ -1,10 +1,13 @@
 <?php
 session_start();
 
-session_unset();
+// Hapus semua variabel sesi yang terdaftar
+session_unset(); 
+
+// Hancurkan sesi
 session_destroy();
 
-// Kembali ke halaman login
+// Redirect ke halaman login. Pastikan nama file ini benar (misal: login.php)
 header("Location: login.php");
 exit;
 ?>
